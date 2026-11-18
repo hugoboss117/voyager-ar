@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#02040c">
+<title>Voyager 1 · One Light-Day AR</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-phase="idle">
+<div id="overlay">
+  <div id="gesture"></div>
+  <div id="hotspots"></div>
+  <div id="sunlabel">☉ Sun &amp; Earth · 1 light-day back</div>
+
+  <div id="hint"></div>
+
+  <div id="hud">
+    <div class="hud-title">VOYAGER 1 · INTERSTELLAR SPACE</div>
+    <div class="hud-grid">
+      <div><b data-live="speed"></b><span>speed (<i data-live="kms"></i>)</span></div>
+      <div><b data-live="light"></b><span>signal time to Earth</span></div>
+      <div><b data-live="open"></b><span>travelled since you opened this</span></div>
+    </div>
+  </div>
+
+  <div id="alignbar">
+    <button id="rotL" aria-label="rotate left">⟲ 1°</button>
+    <span id="scaleVal">100%</span>
+    <button id="rotR" aria-label="rotate right">1° ⟳</button>
+    <button id="btnReplace">Re-place</button>
+    <button id="btnLock" class="primary">Lock</button>
+  </div>
+
+  <div id="bar">
+    <button id="btnTwin" class="ar-only">Show model</button>
+    <button id="btnSpace" class="primary">🚀 Space</button>
+    <button id="btnReal" style="display:none">Real size</button>
+    <button id="btnRealign" class="ar-only">Re-align</button>
+    <button id="btnInfo" class="preview-only">Menu</button>
+    <button id="btnExit" class="ar-only">Exit</button>
+  </div>
+
+  <div id="card">
+    <div class="card-head">
+      <span class="chip"></span>
+      <button class="close" aria-label="close">✕</button>
+    </div>
+    <h2 class="title"></h2>
+    <p class="text"></p>
+    <div class="live">
+      <div><b data-live="dist"></b><span>from Earth (approx.)</span></div>
+      <div><b data-live="light"></b><span>one-way signal time</span></div>
+      <div><b data-live="speed"></b><span>speed</span></div>
+    </div>
+    <div class="audio">
+      <button class="play" disabled>Audio coming soon</button>
+      <div class="prog"><i></i></div>
+    </div>
+  </div>
+
+  <div id="start">
+    <div class="start-inner">
+      <div class="kicker">NOVEMBER 18, 2026</div>
+      <h1>Voyager 1<br><span>One Light-Day</span></h1>
+      <p class="sub">The first human-made object a full light-day from Earth. A radio signal sent now arrives in <b data-live="light"></b>.</p>
+      <ol class="steps">
+        <li>Put your printed Voyager on a table in good light.</li>
+        <li>Tap <b>Start AR</b>, point at the table, tap where the model stands.</li>
+        <li>Slide and twist the ghost until it matches the print, then <b>Lock</b>.</li>
+      </ol>
+      <button id="btnAR" class="big primary">Start AR</button>
+      <button id="btnPreview" class="big">3D preview</button>
+      <p id="arNote" class="note"></p>
+    </div>
+  </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
