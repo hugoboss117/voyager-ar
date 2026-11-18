@@ -12,7 +12,7 @@ A WebXR AR companion for a 3D-printed Voyager 1 model (about 1:38.7 scale). Line
 5. **🚀 Space** replaces the camera view with a starfield and streaming dust. **Real size** grows the model to 1:1 (a 13 m magnetometer boom).
 
 ## Layout
-- `docs/`: the deployed site (GitHub Pages serves this folder)
+- Repo root: the deployed site (GitHub Pages serves the root of `main`)
   - `assets/voyager.glb`: assembled and colored model (metres, Y-up, origin = table point under the bus)
   - `audio/NN_name.mp3`: narration files, one per button
 - `src/`: app source. `data.js` holds button text, status, positions (mm on the print) and audio paths.
@@ -21,7 +21,7 @@ A WebXR AR companion for a 3D-printed Voyager 1 model (about 1:38.7 scale). Line
 ## Build
 ```
 npm i three three-mesh-bvh esbuild
-npx esbuild src/main.js --bundle --format=esm --minify --outfile=docs/app.js
+npx esbuild src/main.js --bundle --format=esm --minify --outfile=app.js
 ```
 
 ## Notes
